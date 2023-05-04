@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Music player</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="icons8-test-passed-32.png" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <h1>Media Player</h1>
+
+    <div class="mt-3 d-flex">
+
+      <select name="cars" id="audios" class="form-control text-center" size="1"  onmousedown="if(this.options.length>2){this.size=2;}" onchange="this.blur()"  onblur="this.size=0;">
+        <option value="001">الفاتحة</option>
+        <option value="018">الكهف</option>
+        <option value="019">مريم</option>
+        <option value="025">الفرقان</option>
+        <option value="027">النمل</option>
+        <option value="030">الروم</option>
+        <option value="033">الأحزاب</option>
+        <option value="055">الرحمن</option>
+        <option value="067">الملك</option>
+      </select>
+      <label for="cars" class="px-4 fs-5">اختر السورة</label>
+
+    </div>
+
+    <div class="music-container" id="music-container">
+      <div class="music-info">
+        <h6 id="length" class="d-inline-block my-1"><span id="currentLength"></span>/<span id="totalLength"></span></h6>
+        <h4 id="title"  class="d-inline-block float-end"></h4>
+
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+
+      <audio src="Audio/001.mp3" id="audio"></audio>
+
+      <div class="img-container">
+        <img src="images/images.jpg" alt="music-cover" id="cover" />
+      </div>
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/main.js"></script>
+  </body>
+</html>
