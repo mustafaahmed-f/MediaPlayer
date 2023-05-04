@@ -36,6 +36,7 @@ document.addEventListener('keyup',(e)=>{
    else if (e.key=="ArrowLeft") {prevAudio()}
 })
 
+
 // ================== functions ======================================
 
 function playANDpause(){
